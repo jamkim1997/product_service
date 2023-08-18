@@ -47,8 +47,6 @@ public class OrderService {
         boolean allProductsInStock = Arrays.stream(inventoryResponsesArray)
                             .allMatch(InventoryResponse::isInStock);
 
-        System.out.println(Arrays.stream(inventoryResponsesArray).);
-
         if(allProductsInStock) {
             orderRepository.save(order);
         }else {
